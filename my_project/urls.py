@@ -3,8 +3,9 @@ from my_project.views import *
 
 urlpatterns = [
 
-    path('', index),
+    path('', index, name='index'),
     path('test/', test),
+    path('example/', example),
 
 
 ]
