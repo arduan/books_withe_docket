@@ -7,6 +7,8 @@ from django.views.generic.base import TemplateView
 # Create your views here.
 
 
+
+
 def index(request):
     """
     :param request: Получат запрос и ...
@@ -17,11 +19,14 @@ def index(request):
 
 
 def test(request):
-    return render(request, 'test.html')
+    return render(request, 'my_project/test.html')
 
 
 def example(request):
-    return render(request, 'example.html')
+    return render(request, 'my_project/example.html')
 
 
-
+def about(request):
+    data = {'name': 'Виталий', 'family': 'Иванов'}
+    my_data = {'name': 'Светлана', 'family': 'Иванова'}
+    return render(request, 'my_project/about.html', context=my_data)
