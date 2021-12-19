@@ -8,7 +8,11 @@ from django.views.generic.base import TemplateView
 
 
 def index(request):
-    data = {'name':'Виталий', 'family': 'Иванов'}
+    """
+    :param request: Получат запрос и ...
+    :return: Возвращает в базовый шаблон base.html словарь data и отображает в шаблоне по ключу словаря.
+    """
+    data = {'name': 'Виталий', 'family': 'Иванов'}
     return render(request, 'my_project/base.html', context=data)
 
 
