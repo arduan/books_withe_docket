@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
+from django.views.generic.base import TemplateView
 
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'index.html')
+    data = {'name':'Виталий', 'family': 'Иванов'}
+    return render(request, 'my_project/base.html', context=data)
 
 
 def test(request):
@@ -18,6 +20,4 @@ def example(request):
     return render(request, 'example.html')
 
 
-class IndexView(View):
-    def get(self, request, *args, **kwargs):
-        return HttpResponse('Hello, world')
+
