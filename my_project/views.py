@@ -33,10 +33,9 @@ def about(request):
     return render(request, 'my_project/about.html', context=my_data)
 
 def show(request):
-    posts = Post.objects.all()
+
     titles = Post.objects.all()
     return render(request, 'my_project/example.html', {
-        'posts': posts,
-        'titles': titles,
+                'titles': titles,
     })
 
