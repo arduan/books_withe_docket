@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from django.views.generic.base import TemplateView
+from .models import Post
 
 
 # Create your views here.
@@ -30,3 +31,12 @@ def about(request):
     data = {'name': 'Виталий', 'family': 'Иванов'}
     my_data = {'name': 'Светлана', 'family': 'Иванова'}
     return render(request, 'my_project/about.html', context=my_data)
+
+def show(request):
+    posts = Post.objects.all()
+    titles = Post.objects.all()
+    return render(request, 'my_project/example.html', {
+        'posts': posts,
+        'titles': titles,
+    })
+
