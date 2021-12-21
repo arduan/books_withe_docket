@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'my_project/base.html' %}
 <head>
     <meta charset="UTF-8">
     <title>О нас</title>
 </head>
 <body>
+
+{% block content %}
 <a href="{% url 'index' %}">На главную страницу</a>
 <h1>{{name}}</h1>
+{% endblock %}
 </body>
 </html>
