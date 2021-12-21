@@ -6,8 +6,19 @@
     <title>Тестовая страница</title>
 </head>
 <body>
+{% block title %}Информация - {{title.title}}{% endblock %}
+
 {% block content%}
+<h1>Эта страница test</h1>
 <h1>Эта запись вне базового шаблона</h1>
+
+<h2>Информация - {{title.title}}</h2>
+<h3>Текст - {{title.text}}</h3>
+
+
+
+
+
 {% endblock %}
 </body>
 </html>
