@@ -8,9 +8,9 @@
 <h2>Список всех записей</h2>
 <ul>
     {% for title in titles %}
-        <li>{{title.title}}, Текст -- {{title.text}}</li>
+        <li><a href="{{title.get_url}}">{{title.title}}</a>, Текст -- {{title.text}}</li>
     {% endfor %}
 
 </ul>
-<a href="test.html">Перейти на страницу test</a>
+
 {% endblock %}
