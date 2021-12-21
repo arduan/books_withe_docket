@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
+{% extends 'my_project/base.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Тестовая страница</title>
 </head>
 <body>
-<a href="{% url 'index' %}">Вернуться на главную страницу</a>
-<h1>{{name}}</h1>
+{% block content%}
+<h1>Эта запись вне базового шаблона</h1>
+{% endblock %}
 </body>
 </html>
