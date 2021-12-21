@@ -8,8 +8,6 @@ from .models import Post
 # Create your views here.
 
 
-
-
 def index(request):
     """
     :param request: Получат запрос и ...
@@ -32,10 +30,9 @@ def about(request):
     my_data = {'name': 'Светлана', 'family': 'Иванова'}
     return render(request, 'my_project/about.html', context=my_data)
 
-def show(request):
 
+def show(request):
     titles = Post.objects.all()
     return render(request, 'my_project/example.html', {
-                'titles': titles,
+        'titles': titles,
     })
-
