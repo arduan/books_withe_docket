@@ -11,7 +11,7 @@ def test(request):
 
 
 def show(request):
-    titles = Post.objects.all()
+    titles = Post.objects.order_by('title')
     return render(request, 'my_project/example.html', {
         'titles': titles,
     })
@@ -21,4 +21,5 @@ def one_show(request, id_title: int):
     title = Post.objects.get(id=id_title)
     return render(request, 'my_project/test.html', {
         'title': title,
+
     })

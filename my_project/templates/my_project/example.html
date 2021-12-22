@@ -8,7 +8,8 @@
 <h2>Список всех записей</h2>
 <ul>
     {% for title in titles %}
-        <li><a href="{{title.get_url}}">{{title.title}}</a>, Текст -- {{title.text}}</li>
+        <li><a href="{{title.get_url}}">{{title.title}}</a>, Текст -- {{title.text}}
+                Возраст -- {{title.age}}</li>
     {% endfor %}
 
 </ul>
