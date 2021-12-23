@@ -8,6 +8,7 @@ class Post(models.Model):
     title = models.CharField("Заголовок", max_length=200)
     text = models.TextField("Текст")
     age = models.IntegerField("Возраст")
+    date_born = models.DateTimeField('Год рождения')
 
     def get_url(self):
         return reverse('title-text', args=[self.id])
