@@ -14,4 +14,4 @@ class Post(models.Model):
         return reverse('title-text', args=[self.id])
 
     def __str__(self):
-        return f'{self.title} {self.text} {self.age}'
+        return f'{self.title} {self.text} {self.age} {self.date_born}'

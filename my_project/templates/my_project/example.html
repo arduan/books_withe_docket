@@ -9,7 +9,9 @@
 <ul>
     {% for title in titles %}
         <li><a href="{{title.get_url}}">{{title.title}}</a>, Текст -- {{title.text}}
-                Возраст -- {{title.age}}</li>
+                Возраст -- {{title.age}}
+                Год рождения -- {{title.date_born}}
+        </li>
     {% endfor %}
 
 </ul>
