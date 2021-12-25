@@ -4,7 +4,7 @@ from django.views import View
 from django.views.generic.base import TemplateView
 from .models import Post
 from django.shortcuts import render
-from .forms import NameForm
+from .forms import NameForm, AcauntForm
 
 
 def test(request):
@@ -43,3 +43,7 @@ def get_name(request):
         form = NameForm()
 
     return render(request, 'my_form.html', {'form': form,})
+
+def form_for_acaunt(request):
+    acaunt_form = AcauntForm(request.POST)
+    return render(request, 'my_form.html', {'acaunt_form': acaunt_form,})
