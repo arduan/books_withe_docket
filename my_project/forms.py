@@ -1,11 +1,5 @@
-from django import forms
+from django.forms import modelform_factory, DecimalField
+from models import Post
 
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
-    age = forms.CharField(label='Возраст', max_length=4)
-    text = forms.CharField(label='Текст', max_length=200)
-
-class AcauntForm(forms.Form):
-    name = forms.CharField(label='Фамилия', max_length=20)
-
+form_model = modelform_factory(Post,fields=('title', 'text','age'))
