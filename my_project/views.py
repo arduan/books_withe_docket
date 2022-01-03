@@ -28,3 +28,6 @@ def one_show(request, id_title: int):
 def get_name(request):
     form = form_model(request.POST)
     return render(request, 'my_form.html', {'form': form})
+
+def about(request):
+    return render(request, 'my_project/about.html')
