@@ -30,4 +30,4 @@ def get_name(request):
     return render(request, 'my_form.html', {'form': form})
 
 def about(request):
-    return render(request, 'my_project/about.html')
+    return render(request, 'my_project/templates/about.html')
